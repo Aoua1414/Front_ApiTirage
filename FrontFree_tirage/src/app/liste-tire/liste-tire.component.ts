@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListetiréService } from '../listetiré.service';
 
 @Component({
   selector: 'app-liste-tire',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-tire.component.scss']
 })
 export class ListeTireComponent implements OnInit {
+  listetire:any;
 
-  constructor() { }
+  constructor(private service : ListetiréService) { }
 
   ngOnInit(): void {
+    this.service.getPostulanttire().subscribe(data=>{
+      this.listetire = data;
+    });
   }
 
 }

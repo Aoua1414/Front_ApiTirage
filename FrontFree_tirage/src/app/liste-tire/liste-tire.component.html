@@ -15,30 +15,24 @@
 </div>
 <div class="abass">
     <table>
-        <tr>
-            <td>N° </td>
-            <td>Nom</td>
-            <td>Prenom</td>
-            <td>Mail</td>
+        <thead>
+                <th>N°  </th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Mail</th>
+                <th>Numero</th>
+        </thead>
+            
+        <tbody>
+        
+        <tr  *ngFor='let tire of listetire'>
+            <td>{{tire.id_postulant_tire}}</td>
+            <td>{{tire.nom_postulant}}</td>
+            <td>{{tire.prenom_postulant}}</td>
+            <td>{{tire.mail_postulant}}</td> 
+            <td>{{tire.numero_postulant}}</td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td>Adiawiakoye</td>
-            <td>Diadjé</td>
-            <td>diadje@gmail.com</td>
-        </tr>
-        <tr>
-            <td> 2 </td>
-            <td>Coulibaly</td>
-            <td>Adama</td>
-            <td>ada@gmail.com</td>
-        </tr>
-        <tr>
-            <td> 3</td>
-            <td>Konte</td>
-            <td>Aly</td>
-            <td>aly@gmail.com</td>
-        </tr>
+        </tbody>
     </table>
 </div>
 </div>

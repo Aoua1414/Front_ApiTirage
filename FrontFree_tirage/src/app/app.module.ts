@@ -7,18 +7,23 @@ import { TirageComponent } from './tirage/tirage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ListeTireComponent } from './liste-tire/liste-tire.component';
 import { PostulantImporterComponent } from './postulant-importer/postulant-importer.component';
-
+import { AccueilComponent } from './accueil/accueil.component';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     TirageComponent,
     ListeTireComponent,
-    PostulantImporterComponent
+    PostulantImporterComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
