@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faDice, faHome, faList, faFileImport} from '@fortawesome/free-solid-svg-icons'
+import {faDice, faHome, faList, faFileImport, faEye} from '@fortawesome/free-solid-svg-icons'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,4 +16,5 @@ export class AppComponent {
   listee=faList;
   listeee=faList;
   importe=faFileImport;
+  eyes=faEye;
 }
