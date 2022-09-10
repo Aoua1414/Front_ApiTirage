@@ -1,0 +1,98 @@
+// .menu a {
+//     display:block;                /* Transformation en block */
+//     min-width: 120px;             /* Largeur minimale des liens */   
+    
+//     margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+//     padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+//     text-align: center;           /* Centrage du texte */   
+//     background-color: #1ABC9C;    /* Arrière-plan */
+//     color: #fff;                  /* Couleur du texte */
+//     text-decoration: none;        /* Suppression du soulignement */
+//     border: 1px solid #fff;       /* Ajout d'une bordure */
+//     border-radius: 4px;           /* Arrondis des bordures */
+//     transition: all 1s ;          /* Ajout des effets de transition */
+// }
+
+.menu {
+    display: flex;              /* Transformation en flexbox */
+    padding: 10px;                 /* Suppression des marges internes */
+    background-color: #034D48;
+        /* Ajout de la couleur d'arrière-plan */
+    //float: right;
+    //padding-top: 10px;
+    
+  
+}
+.des{
+    margin-left:auto;
+
+
+}
+
+.menu li {
+  
+    float: right;
+    list-style-type: none ; 
+    padding: 10px;
+    height: 20px;
+    width: auto;
+    font-size: 20px;
+    
+          /* Suppression des puces */
+}
+.menu li a {
+        /* Arrondis des bordures */
+padding: 6px;
+background-color: rgb(10, 10, 10);
+text-decoration: none;
+border-radius: 10%;
+color: rgb(247, 242, 242);
+
+
+   
+
+}
+/*.nav{
+    background:#161616;
+    height:80px;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+   padding: 0px;
+    margin-top: -20px;
+   
+
+}*/
+h2{
+    padding-bottom:2px;
+}
+   
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: rgb(8, 8, 8);
+    height:150px;
+    text-align: center;
+}
+.nav{
+    margin: 0px;
+    background: #161616;
+    width: 170%;
+    height: 100px;
+    margin-top: -20px;
+    color: #fff;
+}
+.pied{
+    text-align: center;
+    background-color: #034D48;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #034D48;
+    color: rgb(8, 8, 8);
+    text-align: center;
+}
