@@ -60,9 +60,16 @@
                             <td> <input type="file" name="importer" id="importer" class="form-control"></td>
                         
                       </tr>
-                      <tr>
-                          <td>Choisir liste</td>
-                          <td> <input class="form-control" name="nom" placeholder="Liste"></td>
+                      <tr ><td>Choisir liste</td>
+                        <select>
+                            <option *ngFor="let listePos of listePost" class="liste" value="{{listePos.libelle}}">{{listePos.libelle}}</option>
+                        </select>
+                          <!-- <td>Choisir liste</td>
+                          <td> 
+
+                            <input type="select" class="form-control" name="nom" >
+                        </td> -->
+
                       </tr>
                       <tr>
                           <td>Donner un nombre</td>

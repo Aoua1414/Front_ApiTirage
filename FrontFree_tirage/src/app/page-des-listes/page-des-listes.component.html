@@ -5,28 +5,23 @@
         <tr>
             <th>Nbre de tirage </th>
             <th>Date</th>
-            <th>Libellé</th>
+            <th>Libelle</th>
+            <th>id-liste</th>
             <th>Détails</th>
         </tr>
     </thead>
-        <tr>
-            <td> 3 </td>
-            <td>12/09/20</td>
-            <td>Liste 1</td>
-           
-            <td>  <img alt="icon" src="eyes.png"> </td>
+    <tbody>
+
+        <tr *ngFor="let tire of tirage">
+            <!--<td>{{tire.id_tirage}}</td>-->
+            <td>{{tire.nombre}}</td>
+            <td>{{tire.dateT}}</td>
+            <td>{{tire.libelle}}</td>
+            <td>{{tire.id_liste}}</td>
+
+            <td><a routerLink="/detail" routerLinkActive="active"> <img alt="icon" src="assets/eyes.png"></a> </td>
         </tr>
-        <tr>
-            <td> 2 </td>
-            <td>09/11/22</td>
-            <td>Liste 2</td>
-            <td><i class="fa-duotone fa-eye"></i></td>
-        </tr>
-        <tr>
-            <td> 5</td>
-            <td>05/03/22</td>
-            <td>Liste 3</td>
-            <td></td>
-        </tr>
+    </tbody>
+    
     </table>
 </div>

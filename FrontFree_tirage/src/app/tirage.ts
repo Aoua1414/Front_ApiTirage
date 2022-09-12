@@ -1,8 +1,8 @@
 export class Tirage {
-    id_tirage:number | undefined;
-    date: Date | undefined;
-    libellé:string |undefined;
-    id_liste : number | undefined;
+    nombre : number |undefined;
+    datet: Date | undefined;
+    libelle:string |undefined;
+    //libelle:string |undefined;
 
 
 }

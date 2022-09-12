@@ -7,11 +7,21 @@ import {Observable} from 'rxjs';
 })
 export class TirageService {
 
-  constructor(private http:HttpClient) { }
+  url ="http://localhost:8080/tirage/liste";
+  constructor(private http: HttpClient) { }
+  
   getTirage(): Observable<object>
   {
     //accès à la base de donnée par httpclient
-    return this.http.get("http://localhost:8080/postulant/afficherpostulant");
+    return this.http.get(`${this.url}`);
 
   }
+  
+  getListe(): Observable<object>
+  {
+    //accès à la base de donnée par httpclient
+    return this.http.get(`${this.url}`);
+
+  }
+  
 }

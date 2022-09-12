@@ -15,7 +15,7 @@ const routes: Routes = [
     component:TirageComponent
   },
   {
-    path:"listtire",
+    path:"detail",
     component:ListeTireComponent
   },
  {

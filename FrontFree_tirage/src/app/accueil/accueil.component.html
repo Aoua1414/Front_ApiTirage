@@ -61,24 +61,14 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Libellé</th>
+                        <th>Libelle</th>
                         <th>Nbre de tirage</th>
                         <th>Detail</th>
                     </tr>
-                    <tr>
-                        <td>liste1</td>
-                        <td>2</td>
-                        <td><a href="#">button</a></td>
-                    </tr>
-                    <tr>
-                        <td>liste2</td>
-                        <td>3</td>
-                        <td><a href="#">button</a></td>
-                    </tr>
-                    <tr>
-                        <td>liste3</td>
-                        <td>5</td>
-                        <td><a href="#">button</a></td>
+                    <tr *ngFor ="let list of listePost">
+                        <td>{{list.libelle}}</td>
+                        <td>{{Nombre}}</td>
+                        <td><a routerLink="/listes" routerLinkActive="active">voir</a></td>
                     </tr>
                 </thead>
                 

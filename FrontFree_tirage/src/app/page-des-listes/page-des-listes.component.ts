@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tirage } from '../tirage';
+import { TirageService } from '../tirage.service';
 
 @Component({
   selector: 'app-page-des-listes',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageDesListesComponent implements OnInit {
 
-  constructor() { }
+
+  tirage:any;
+  constructor(private service : TirageService) { }
 
   ngOnInit(): void {
-  }
+    this.service.getTirage().subscribe(data=>{
+      this.tirage= data;
+  });
+}
 
 }

@@ -7,9 +7,7 @@ import {faDice, faHome, faList, faFileImport, faEye} from '@fortawesome/free-sol
 })
 export class AppComponent {
   title = 'Free_tirage';
- 
-
-  
+   
   home=faHome;
   tirage=faDice;
   liste=faList;

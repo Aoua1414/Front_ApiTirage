@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostulantService } from '../postulant.service';
 
 @Component({
   selector: 'app-postulants',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostulantsComponent implements OnInit {
 
-  constructor() { }
+  postulants:any;
+  constructor(private service: PostulantService) { }
 
   ngOnInit(): void {
-  }
+    this.service.getPostulant().subscribe(data=>{
+      //console.log(data)
+      this.postulants = data;
+  });
 
+  }
 }
+
