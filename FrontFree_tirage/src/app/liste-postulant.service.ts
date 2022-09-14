@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class ListePostulantService {
 
-  listePost:any;
+  // listePost:any;
   constructor(private http : HttpClient) { }
   getListe(): Observable<object>{
 return this.http.get("http://localhost:8080/listepostulant/liste")

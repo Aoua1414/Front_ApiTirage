@@ -68,7 +68,7 @@ h2{
 }
    
 .navbar{
-    position: fixed;
+    //position: fixed;
     left: 0;
     top: 0;
     color: rgb(8, 8, 8);
@@ -76,9 +76,10 @@ h2{
     text-align: center;
 }
 .nav{
+    position: fixed;
     margin: 0px;
     background: #161616;
-    width: 170%;
+    width: 100%;
     height: 100px;
     margin-top: -20px;
     color: #fff;
@@ -93,6 +94,9 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #034D48;
-    color: rgb(8, 8, 8);
+    color:white;
     text-align: center;
+}
+h3{
+    font-size: 30px;
 }

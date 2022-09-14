@@ -1,121 +1,56 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><h2>TIRAGE</h2> </title>
-</head>
-<body>
-   
-    <h1 style="margin-top: 50px;">BIENVENUE SUR LA PAGE DE TIRAGE AU SORT</h1>
-    <br>
-    <br>
-    <div class="c">
-        
-    <p><strong>Importer liste</strong></p>
+
+    <div class="container row">
+        <div class="ligne">
+        <div class="col-8">
+            <form (ngSubmit)="onSubmit()" class="monForm">
+                <table>
+                      <tbody>
+                        Choisir une liste
+                          <select [(ngModel)] ="choix" name="libelleliste">
+                              <option *ngFor="let list of listePost"  [ngValue]="list.libelle" >
+                                {{list.libelle}}
+                              </option>
+                          </select>
+                          <tr>
+                              <td>Donner un nombre</td>
+                              <td> <input type="number" class="form-control" name="nombre" min="1" placeholder="10" [(ngModel)]="tirage.nombre"></td>
+                          </tr>
+                          <tr>
+                                          <td for="name">Libellé du tirage</td>
+                                          <td><input type="text" id="name" class="form-control" placeholder="Liste apprenants" name="libelleTirage" [(ngModel)]="tirage.libelle"></td>
+                          </tr>
+                          <tr>
+                              <td><input type="submit" value="Trier" class="form-control btn btn-primary"></td>
+                          </tr>
+          
+                      </tbody>
+                </table>
+          </form>
+        </div>
     
+        <div class="col-4">
+            <form>
+                <table>
+                      <tbody>
+                          <tr>
+                            <td>
+                                <input type="file" name="importer" id="importer" class="form-control">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <input type="text" name="libelleListe" id="libelleListe" class="form-control" placeholder="Liste apprenants">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <input type="submit" name="import" value="Envoyer" class="form-control btn btn-primary">
+                            </td>
+                          </tr>
+                      </tbody>
+                </table>
+          </form>
+        </div>
     
-    <p><strong class="choix">Choisir liste</strong>
-        <input type="text" list="liste" >
-        <datalist id="liste" >
-        <option> liste1 </option>
-        <option> liste2 </option>
-         <option> liste3 </option>
-     
-     </datalist></p>
-     <img src="assets/vrai.png" class="dam"/>
-    <P><strong class="nbre"> Donner un nombre</strong><input type="number" min="1" max="1000">
-    </P>
-    
-    <form>
-        <input type="button" class="btn" value="Trier">
-      </form>
-</div>
-
-<input name="liste" type="select">
-   
-   <p>Choisir une liste</p>
-   <option valeur="liste">Liste 1</option>
-   <option valeur="liste2">Liste 2</option>
-   <option valeur="liste3">Liste 3</option>
-
-   
-</body>
-
-<div id="barre_fixe">
-    <p>Copyright@2022 Free Tirage, developpé par Orange Digital Kalanso</p>
-    </div>-->
-
-   
-<div class="container row">
-    <h1 style="margin-top: 50px;">BIENVENUE SUR LA PAGE DE TIRAGE AU SORT</h1>
-    <div class="col-8">
-        <form>
-            <table>
-                  <tbody>
-                    <tr>
-                        
-                          <td>Importer liste</td>
-                            <td> <input type="file" name="importer" id="importer" class="form-control"></td>
-                        
-                      </tr>
-                      <tr ><td>Choisir liste</td>
-                        <select>
-                            <option *ngFor="let listePos of listePost" class="liste" value="{{listePos.libelle}}">{{listePos.libelle}}</option>
-                        </select>
-                          <!-- <td>Choisir liste</td>
-                          <td> 
-
-                            <input type="select" class="form-control" name="nom" >
-                        </td> -->
-
-                      </tr>
-                      <tr>
-                          <td>Donner un nombre</td>
-                          <td> <input type="number" class="form-control" name="nombre" min="1" placeholder="10"></td>
-                      </tr>
-                      <tr>
-                                      <td for="name">Libellé du tirage</td>
-                                      <td><input type="text" id="name" class="form-control" placeholder="libelle" name="libelleTirage"></td>
-                      </tr>
-                      <tr>
-                          <td><input type="submit" value="Trier" class="form-control btn btn-primary"></td>
-                      </tr>
-      
-                  </tbody>
-            </table>
-      </form>
-      <img src="assets/vrai.png" class="dam"/>
-
     </div>
-
-
-    <!--<div class="col-4">
-        <form>
-            <table>
-                  <tbody>
-                      <tr>
-                        <td>
-                            <input type="file" name="importer" id="importer" class="form-control">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                            <input type="text" name="libelleListe" id="libelleListe" class="form-control" placeholder="Liste apprenants">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                            <input type="submit" name="import" value="Envoyer" class="form-control btn btn-primary">
-                        </td>
-                      </tr>
-                  </tbody>
-
-            </table>
-      </form>
-    </div>
--->
 </div>
-
-

@@ -1,7 +1,10 @@
+import { ListePostulant } from "./liste-postulant";
 export class Tirage {
-    nombre : number |undefined;
-    datet: Date | undefined;
-    libelle:string |undefined;
+          nombre!: number ;
+           libelle!:string ;
+           datet!: Date;
+
+           listePostulant!:ListePostulant;
     //libelle:string |undefined;
 
 

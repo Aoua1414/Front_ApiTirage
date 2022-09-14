@@ -48,3 +48,17 @@ body{
 td{
     padding-top: 20px;
 }
+
+.ligne{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.container
+{
+    background: #FFFFFF; padding: 15px;
+    border-radius: 15px; align-items: center;
+    color:  #587CFD;;
+}
+td{
+    padding-top: 20px;
+}
