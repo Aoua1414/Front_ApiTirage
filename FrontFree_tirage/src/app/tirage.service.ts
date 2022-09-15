@@ -25,18 +25,30 @@ export class TirageService {
 
   }
 
+  nombre!: number ;
+  libelle!:string ;
+  
+  resetForm(){
+    this.libelle!
+    this.nombre
+    }
   //Creation de tirage
   //debut
-  getTotal():number{
-    return this.getTirage.length
+  getTotal(){
+    return this.http.get(`http://localhost:8080/tirage/total`)
   }
 
   CreerTirage(tirage:Tirage, libelle:String, nombre:number){
 
     return this.http.post(`http://localhost:8080/tirage/createTirage/${libelle}/${nombre}`,tirage);
+    this.resetForm();
   }
 
  //Fin
+
+ TrouveTirageParListe(id:number){
+  return this.http.get(`http://localhost:8080/tirage/tirage_liste/${id}`)
+ }
 
  getImpoter(){
   

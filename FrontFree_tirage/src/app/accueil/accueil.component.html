@@ -4,7 +4,7 @@
         <div class="cards">
             <div class="card">
                 <div class="box">
-                    <h1>2</h1>
+                    <h1>{{nombreListe}}</h1>
                     <h3>Total liste tirées</h3>
                 </div>
                
@@ -17,7 +17,7 @@
         </div>
         <div class="card">
             <div class="box">
-                <h1>3</h1>
+                <h1>{{totalpostulant}}</h1>
                 <h3>Total liste postulant</h3>
             </div>
            
@@ -30,7 +30,7 @@
     </div>
     <div class="card">
         <div class="box">
-            <h1>6</h1>
+            <h1>{{totaltirage}}</h1>
             <h3>Total Tirage</h3>
         </div>
        
@@ -43,7 +43,7 @@
 </div>
 <div class="card">
     <div class="box">
-        <h1>3</h1>
+        <h1>{{nombrelistestotal}}</h1>
         <h3>Total liste importées</h3>
     </div>
    
@@ -67,8 +67,8 @@
                     </tr>
                     <tr *ngFor ="let list of listePost">
                         <td>{{list.libelle}}</td>
-                        <td>{{Nombre}}</td>
-                        <td><a routerLink="/listes">voir</a></td>
+                        <td>{{list.nombre}}</td>
+                        <td><a [routerLink]="['/detail',list.id_Liste_postulant]">voir</a></td>
                     </tr>
                 </thead>
                 

@@ -6,9 +6,13 @@ import { PageDesListesComponent } from './page-des-listes/page-des-listes.compon
 import { PostulantImporterComponent } from './postulant-importer/postulant-importer.component';
 import { PostulantsComponent } from './postulants/postulants.component';
 import { TirageComponent } from './tirage/tirage.component';
+import { TiragelisteComponent } from './tirageliste/tirageliste.component';
 
 const routes: Routes = [
-
+{
+  path:"detail/:id_liste",
+  component:PageDesListesComponent
+},
   
   {
     path:"tirage",
@@ -34,12 +38,16 @@ const routes: Routes = [
   path:"postulants",
   component:PostulantsComponent
 },
-/*
+{
+  path:"Liste",
+  component:TiragelisteComponent
+},
   {
     path:"",
     redirectTo:"accueil",
     pathMatch:'full'
-  }*/
+  }
+
   
   
 ];

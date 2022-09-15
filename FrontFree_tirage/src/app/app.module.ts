@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 
 import { PageDesListesComponent } from './page-des-listes/page-des-listes.component';
 import { PostulantsComponent } from './postulants/postulants.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { PostulantsComponent } from './postulants/postulants.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FontAwesomeModule,
     HttpClientModule,
     FormsModule

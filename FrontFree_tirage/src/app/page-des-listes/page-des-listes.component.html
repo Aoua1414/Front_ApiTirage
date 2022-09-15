@@ -3,23 +3,21 @@
     <table>
         <thead>
         <tr>
-            <th>Nbre de tirage </th>
+            <th>Nbre de personnes tirées </th>
             <th>Date</th>
             <th>Libelle</th>
-            <th>id-liste</th>
-            <th>Détails</th>
+            
         </tr>
     </thead>
     <tbody>
 
-        <tr *ngFor="let tire of tirage">
+        <tr *ngFor="let tire of ListeTirage">
             <!--<td>{{tire.id_tirage}}</td>-->
-            <td>{{tire.nombre}}</td>
-            <td>{{tire.dateT}}</td>
+            <td>{{tire.nbre_postulant_tire}}</td>
+            <td>{{tire.dateT|date}}</td>
             <td>{{tire.libelle}}</td>
-            <td>{{tire.id_liste}}</td>
 
-            <td><a routerLink="/detail" routerLinkActive="active"> voir</a> </td>
+            <!-- <td><a routerLink="/detail" routerLinkActive="active"> voir</a> </td> -->
         </tr>
     </tbody>
     

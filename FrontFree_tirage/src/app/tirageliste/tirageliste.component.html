@@ -1,0 +1,28 @@
+<h1 style="margin-top: 50px;">BIENVENUE SUR LA PAGE DES LISTES azertyui</h1>
+<div class="list">
+    <table>
+        <thead>
+        <tr>
+            <th>Nbre de tirage </th>
+            <th>Date</th>
+            <th>Libelle</th>
+            <th>id-liste</th>
+            <th>Détails</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let tire of tirage">
+            <!--<td>{{tire.id_tirage}}</td>-->
+            <td>{{tire.nombre}}</td>
+            <td>{{tire.dateT}}</td>
+            <td>{{tire.libelle}}</td>
+            <td>{{tire.id_liste}}</td>
+
+            <td><a routerLink="/detail" routerLinkActive="active"> voir</a> </td>
+        </tr>
+    </tbody>
+    
+    </table>
+</div>
+

@@ -18,4 +18,7 @@ export class PostulantService {
  /* getListePostulant(): Observable<Postulant[]>{
 return this.http.get<Postulant[]>
   }*/
+  getTotalpost(){
+    return this.http.get(`http://localhost:8080/postulant/totalpostulant`)
+  }
 }
