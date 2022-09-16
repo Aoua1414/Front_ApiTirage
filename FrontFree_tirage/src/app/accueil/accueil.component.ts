@@ -16,8 +16,9 @@ export class AccueilComponent implements OnInit {
   tirage!:Tirage[];
   nombrelistestotal!:any;
 totaltirage!:any
-totalpostulant!:any
-nombreListe!:any;
+totalpostulant:any
+nombreListe:any;
+page:number=1;
   constructor(private service :ListePostulantService,private servicT:TirageService,  private servicepost : PostulantService  ) { }
 
   ngOnInit(): void {

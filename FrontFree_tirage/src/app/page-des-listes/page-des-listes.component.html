@@ -11,7 +11,7 @@
     </thead>
     <tbody>
 
-        <tr *ngFor="let tire of ListeTirage">
+        <tr *ngFor="let tire of ListeTirage | paginate:{itemsPerPage: 3, currentPage:page}">
             <!--<td>{{tire.id_tirage}}</td>-->
             <td>{{tire.nbre_postulant_tire}}</td>
             <td>{{tire.dateT|date}}</td>
@@ -20,6 +20,6 @@
             <!-- <td><a routerLink="/detail" routerLinkActive="active"> voir</a> </td> -->
         </tr>
     </tbody>
-    
+    <pagination-controls (pageChange)="page = $event" previousLabel="Précedent" nextLabel="Suivant"> </pagination-controls>
     </table>
 </div>

@@ -13,6 +13,7 @@ export class TirageComponent implements OnInit {
 
    tirage:Tirage = new Tirage();
   listePost:any;
+  //Pour recuperer les attributs de tirage
   tirages!:Tirage[];
   choix:any;
   nombre:any;
@@ -24,12 +25,6 @@ export class TirageComponent implements OnInit {
     console.log(data)
     this.listePost = data;
   });
-
-  // this.serviceTirage.CreerTirage(this.tirage, this.choix, this.nombre).subscribe(data=>{
-  // console.log(data);
-  // },
-  // error=>console.log(error)
-  // );
 
 
 }

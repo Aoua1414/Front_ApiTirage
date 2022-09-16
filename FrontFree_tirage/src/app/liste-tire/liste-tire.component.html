@@ -1,18 +1,6 @@
 <div class="container">
 <h1 style="margin-top: 50px;">BIENVENUE SUR LA PAGE DES POSTULANTS TIRES</h1>
 
-<div>
-    <label for="name"> Libellé liste : </label>
-    
-    <br>
-    <br>
-    <label for="name"> Libellé tirage : </label>
-    <input type="text" name="Libbelé tirage "/>
-    <br>
-    <br>
-    <label for="name"> Nombre tiré : </label>
-    <input type="text" name="nbre" class="cadre"/>
-</div>
 <div class="abass">
     <table>
         <thead>
@@ -28,7 +16,7 @@
             
         <tbody>
         
-        <tr  *ngFor='let tire of listetire'>
+        <tr  *ngFor='let tire of listetire | paginate:{itemsPerPage: 3, currentPage:page}'>
             <td>{{tire.id_postulant_tire}}</td>
             <td>{{tire.nom_postulant}}</td>
             <td>{{tire.prenom_postulant}}</td>
@@ -37,5 +25,7 @@
         </tr>
     </tbody>
     </table>
+    <pagination-controls (pageChange)="page = $event" previousLabel="Précedent" nextLabel="Suivant"> </pagination-controls>
+
 </div>
 </div>

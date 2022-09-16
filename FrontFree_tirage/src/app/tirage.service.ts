@@ -45,7 +45,8 @@ export class TirageService {
   }
 
  //Fin
-
+ 
+//afficher les tirages sur une liste
  TrouveTirageParListe(id:number){
   return this.http.get(`http://localhost:8080/tirage/tirage_liste/${id}`)
  }

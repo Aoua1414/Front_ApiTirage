@@ -8,6 +8,7 @@ import { ListetiréService } from '../listetiré.service';
 })
 export class ListeTireComponent implements OnInit {
   listetire:any;
+  page:number=1;
 
   constructor(private service : ListetiréService) { }
 

@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { PageDesListesComponent } from './page-des-listes/page-des-listes.component';
 import { PostulantsComponent } from './postulants/postulants.component';
 import { RouterModule } from '@angular/router';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

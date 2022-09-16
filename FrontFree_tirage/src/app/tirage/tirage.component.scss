@@ -50,8 +50,13 @@ td{
 }
 
 .ligne{
+    /*
     display: grid;
     grid-template-columns: auto auto;
+    */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .container
 {
@@ -62,3 +67,12 @@ td{
 td{
     padding-top: 20px;
 }
+
+@media screen and (max-width: 900px)
+{
+    .ligne{
+        flex-direction: column;
+    }
+
+}
+

@@ -9,6 +9,7 @@ import { PostulantService } from '../postulant.service';
 export class PostulantsComponent implements OnInit {
 
   postulants:any;
+  page:number=1;
   constructor(private service: PostulantService) { }
 
   ngOnInit(): void {
