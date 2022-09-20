@@ -9,12 +9,13 @@ import { ListeTireComponent } from './liste-tire/liste-tire.component';
 import { PostulantImporterComponent } from './postulant-importer/postulant-importer.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PageDesListesComponent } from './page-des-listes/page-des-listes.component';
 import { PostulantsComponent } from './postulants/postulants.component';
 import { RouterModule } from '@angular/router';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { DetailtirageComponent } from './detailtirage/detailtirage.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     PostulantImporterComponent,
     AccueilComponent,
     PageDesListesComponent,
-    PostulantsComponent
+    PostulantsComponent,
+    DetailtirageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     NgxPaginationModule
   ],
   providers: [],

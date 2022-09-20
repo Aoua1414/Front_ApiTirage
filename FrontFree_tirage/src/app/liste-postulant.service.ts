@@ -16,8 +16,9 @@ return this.http.get("http://localhost:8080/listepostulant/liste")
   getNombre(libelle:string): Observable<object>{
     return this.http.get("http://localhost:8080/listepostulant/nombre/"+`${libelle}`)
       }
-      getNombreListe(){
-        return this.http.get(`http://localhost:8080/listepostulant/nbre`);
+  getNombreListe(){
+       return this.http.get(`http://localhost:8080/listepostulant/nbre`);
       }
       
+
 }

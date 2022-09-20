@@ -1,0 +1,31 @@
+<div class="container" >
+    <h1 style="margin-top: 50px;">BIENVENUE SUR LA PAGE DES POSTULANTS TIRES  PAR LISTE</h1>
+    
+    <div class="abass">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Mail</th>
+                    <th>Numero</th>
+                </tr>
+                    
+            </thead>
+                
+            <tbody>
+            
+            <tr  *ngFor='let tire of posttires | paginate:{itemsPerPage: 10, currentPage:page}'>
+            
+                <td>{{tire.nom_postulant}}</td>
+                <td>{{tire.prenom_postulant}}</td>
+                <td>{{tire.mail_postulant}}</td> 
+                <td>{{tire.numero_postulant}}</td>
+            </tr>
+        </tbody>
+        </table>
+        <pagination-controls (pageChange)="page = $event" previousLabel="Précedent" nextLabel="Suivant"> </pagination-controls>
+    
+    </div>
+    </div>
+    

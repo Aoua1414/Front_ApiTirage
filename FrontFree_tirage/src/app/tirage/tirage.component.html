@@ -30,24 +30,24 @@
         </div>
     
         <div class="col-4">
-            <h3>IMPOTER UNE LISTE</h3>
+            <h3>IMPORTER UNE LISTE</h3>
 
-            <form>
+            <form [formGroup]="formmodule" (ngSubmit)="importerListe()">
                 <table>
                       <tbody>
                           <tr>
                             <td>
-                                <input type="file" name="importer" id="importer" class="form-control">
+                                <input type="file" name="importer" id="importer" class="form-control" (change)="fileChange($event)">
                             </td>
                           </tr>
                           <tr>
                             <td>
-                                <input type="text" name="libelleListe" id="libelleListe" class="form-control" placeholder="Liste apprenants">
+                                <input type="text" [(ngModel)]="libelleListe"  name="libelle" id="libelleListe" class="form-control" placeholder="Liste apprenants" formControlName="libelle">
                             </td>
                           </tr>
                           <tr>
                             <td>
-                                <input type="submit" name="import" value="IMPOTER" class="form-control btn btn-primary">
+                                <input type="submit" name="import" value="IMPORTER" class="form-control btn btn-primary">
                             </td>
                           </tr>
                       </tbody>

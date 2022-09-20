@@ -2,27 +2,29 @@
 <div class="list">
     <table>
         <thead>
-        <tr>
-            <th>Nbre de tirage </th>
-            <th>Date</th>
-            <th>Libelle</th>
-            <th>id-liste</th>
-            <th>Détails</th>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Mail</th>
+                <th>Numero</th>
+            
+            </tr>
+                
+        </thead>
+            
+        <tbody>
+        
+        <tr  *ngFor='let tire of posttire | paginate:{itemsPerPage: 10, currentPage:page}'>
+            <td>{{tire.id_postulant_tire}}</td>
+            <td>{{tire.nom_postulant}}</td>
+            <td>{{tire.prenom_postulant}}</td>
+            <td>{{tire.mail_postulant}}</td> 
+            <td>{{tire.numero_postulant}}</td>
+           
         </tr>
-    </thead>
-    <tbody>
-
-        <tr *ngFor="let tire of tirage">
-            <!--<td>{{tire.id_tirage}}</td>-->
-            <td>{{tire.nombre}}</td>
-            <td>{{tire.dateT}}</td>
-            <td>{{tire.libelle}}</td>
-            <td>{{tire.id_liste}}</td>
-
-            <td><a routerLink="/detail" routerLinkActive="active"> voir</a> </td>
-        </tr>
-    </tbody>
-    
+        </tbody>
     </table>
 </div>
-
+<!--<pagination-controls (pageChange)="page = $event" previousLabel="Précedent" nextLabel="Suivant"> </pagination-controls>
+-->

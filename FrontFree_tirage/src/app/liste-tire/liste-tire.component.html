@@ -16,7 +16,7 @@
             
         <tbody>
         
-        <tr  *ngFor='let tire of listetire | paginate:{itemsPerPage: 3, currentPage:page}'>
+        <tr  *ngFor='let tire of listetire | paginate:{itemsPerPage: 10, currentPage:page}'>
             <td>{{tire.id_postulant_tire}}</td>
             <td>{{tire.nom_postulant}}</td>
             <td>{{tire.prenom_postulant}}</td>

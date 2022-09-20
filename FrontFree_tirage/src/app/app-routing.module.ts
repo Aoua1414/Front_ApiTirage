@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
+import { DetailtirageComponent } from './detailtirage/detailtirage.component';
 import { ListeTireComponent } from './liste-tire/liste-tire.component';
 import { PageDesListesComponent } from './page-des-listes/page-des-listes.component';
 import { PostulantImporterComponent } from './postulant-importer/postulant-importer.component';
@@ -39,8 +40,12 @@ const routes: Routes = [
   component:PostulantsComponent
 },
 {
-  path:"Liste",
+  path:"liste",
   component:TiragelisteComponent
+},
+{
+  path:"tirageliste/:idTirage",
+  component:DetailtirageComponent
 },
   {
     path:"",

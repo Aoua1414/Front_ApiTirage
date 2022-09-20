@@ -14,4 +14,11 @@ export class ListetiréService {
     return this.http.get("http://localhost:8080/postulanttire/afficherpostulanttire");
 
   }
+
+  getPostulanttireTirage(id_tirage:number)
+  {
+    //accès à la base de donnée par httpclient
+    return this.http.get(`http://localhost:8080/postulanttire/afficherpostulanttirepartirage/${id_tirage}` );
+
+  }
 }

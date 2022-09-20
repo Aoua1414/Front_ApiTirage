@@ -38,10 +38,9 @@ export class TirageService {
     return this.http.get(`http://localhost:8080/tirage/total`)
   }
 
-  CreerTirage(tirage:Tirage, libelle:String, nombre:number){
+  CreerTirage(tirage:Tirage, libelle:String, nombre:number):Observable<any>{
 
     return this.http.post(`http://localhost:8080/tirage/createTirage/${libelle}/${nombre}`,tirage);
-    this.resetForm();
   }
 
  //Fin
@@ -51,7 +50,14 @@ export class TirageService {
   return this.http.get(`http://localhost:8080/tirage/tirage_liste/${id}`)
  }
 
- getImpoter(){
+ getImpoter(libelleListe:string, importer:any):Observable<any>{
   
+  let data = new FormData();
+  data.append("file", importer)
+
+  return this.http.post<any>(`http://localhost:8080/postulant/importer/${libelleListe}`, data);
+
  }
+
+
 }

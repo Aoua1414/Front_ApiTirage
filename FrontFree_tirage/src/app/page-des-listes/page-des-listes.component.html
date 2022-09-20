@@ -3,6 +3,7 @@
     <table>
         <thead>
         <tr>
+            <!-- <th>Id</th> -->
             <th>Nbre de personnes tirées </th>
             <th>Date</th>
             <th>Libelle</th>
@@ -12,12 +13,13 @@
     </thead>
     <tbody>
 
-        <tr *ngFor="let tire of ListeTirage | paginate:{itemsPerPage: 3, currentPage:page}">
-            <!--<td>{{tire.id_tirage}}</td>-->
+        <tr *ngFor="let tire of ListeTirage | paginate:{itemsPerPage: 10, currentPage:page}">
+            <!-- <td>{{tire.idTirage}}</td> -->
             <td>{{tire.nbre_postulant_tire}}</td>
             <td>{{tire.dateT|date}}</td>
             <td>{{tire.libelle}}</td>
-            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+            <td><a [routerLink]="['/tirageliste',tire.idTirage]">voir</a></td>
+        
             <!-- <td><a routerLink="/detail" routerLinkActive="active"> voir</a> </td> -->
         </tr>
     </tbody>
