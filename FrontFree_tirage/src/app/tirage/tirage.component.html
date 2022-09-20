@@ -18,10 +18,10 @@
                           </tr>
                           <tr>
                                           <td for="name">Libellé du tirage</td>
-                                          <td><input type="text" id="name" class="form-control" placeholder="Liste apprenants" name="libelleTirage" [(ngModel)]="tirage.libelle"></td>
+                                          <td><input type="text" id="name" class="form-control" placeholder="Libelle" name="libelleTirage" [(ngModel)]="tirage.libelle"></td>
                           </tr>
                           <tr>
-                              <td><input type="submit" value="Trier" class="form-control btn btn-primary"></td>
+                              <td><input type="submit" value="Trier" class="form-control btn btn-primary" (click)="notificationMessage()"></td>
                           </tr>
           
                       </tbody>

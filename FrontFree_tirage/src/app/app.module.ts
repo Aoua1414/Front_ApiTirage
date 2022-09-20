@@ -16,6 +16,9 @@ import { PostulantsComponent } from './postulants/postulants.component';
 import { RouterModule } from '@angular/router';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { DetailtirageComponent } from './detailtirage/detailtirage.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { DetailtirageComponent } from './detailtirage/detailtirage.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ToastrModule,
+    BrowserAnimationsModule,
     NgxPaginationModule
   ],
   providers: [],

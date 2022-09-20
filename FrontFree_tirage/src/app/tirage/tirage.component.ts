@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { Import } from '../import';
 import { ListePostulantService } from '../liste-postulant.service';
 import { Tirage } from '../tirage';
@@ -29,7 +30,8 @@ export class TirageComponent implements OnInit {
 
   constructor(public service :ListePostulantService, 
     private formB: FormBuilder,
-    private serviceTirage: TirageService) { }
+    private serviceTirage: TirageService,
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
 
@@ -70,7 +72,11 @@ onSubmit(){
   console.log(this.choix)
   this.serviceTirage.CreerTirage(this.tirage, this.choix, this.tirage.nombre).subscribe(data=>{
     console.log(data);
+  
+
+
     if(data=="Tirage effectué avec succès"){
+      this.toastr.success("Tirage effectué avec succès")
       alert("Tirage effectue avec succes")
     }else if(data=="Ce tirage exixte dejà"){
       alert("Ce tirage existe deja")
@@ -80,7 +86,11 @@ onSubmit(){
 
     }
    })
+   
  }
+ notificationMessage(){
+  this.toastr.success("Tirage effectué avec succès")
+}
  //Pour creer un popup
  //private modaService: NgbModal
 //  closeResult!: string;
